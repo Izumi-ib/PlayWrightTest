@@ -37,8 +37,11 @@ jobs:
     if: success()
 
     steps:
-      - name: ⬇️ Checkout repo
-        uses: actions/checkout@v4
+      - name: ⬇️ Download Allure report artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: allure-report
+          path: allure-report
 
       - name: 🚀 Deploy Allure report to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
