@@ -8,7 +8,10 @@
     "test:headed": "playwright test --headed",
     "test:debug": "playwright test --project=debug-chrome",
     "test:report": "playwright show-report",
-    "allure:serve": "allure serve ./allure-results"
+    "test:e2e": "npx playwright test --grep @e2e",
+    "allure:report": "allure generate ./allure-results --clean -o ./allure-report && allure open ./allure-report",
+    "allure:serve": "allure serve ./allure-results",
+    "prepare:allure-meta": "ts-node prepare-allure-meta.ts"
   },
   "keywords": [],
   "author": "",
@@ -22,7 +25,6 @@
   },
   "dependencies": {
     "@faker-js/faker": "^9.8.0",
-    "allure-playwright": "^3.2.2",
-    "tslog": "^4.7.2"
+    "allure-playwright": "^3.2.2"
   }
 }

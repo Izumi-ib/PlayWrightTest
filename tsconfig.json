@@ -8,6 +8,6 @@
     "moduleResolution": "node",
     "types": ["node", "playwright"]
   },
-  "include": ["tests", "pages", "utils", "data", "config"],
+  "include": ["tests", "pages", "support/utils", "data", "config", "support/hooks", "components/Header.ts", "support/logger.ts"],
   "exclude": ["node_modules"]
 }

@@ -10,11 +10,12 @@ export default defineConfig({
     ['allure-playwright']
   ],
   use: {
-    headless: true,
+    headless: true, 
     viewport: { width: 1280, height: 720 },
     baseURL: process.env.BASE_URL || "http://demowebshop.tricentis.com",
     video: "retain-on-failure",
     screenshot: "only-on-failure",
+    trace: 'on-first-retry',
     actionTimeout: 0,
   },
   projects: [
