@@ -1,0 +1,16 @@
+[
+  {
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "john.doe@example.com",
+    "company": "Beast Inc.",
+    "country": "Germany",
+    "stateProvince": "Other (Non US)",
+    "city": "Berlin",
+    "address1": "Alexanderplatz 1",
+    "address2": "Floor 3",
+    "zipPostalCode": "10178",
+    "phoneNumber": "+49 30 12345678",
+    "faxNumber": "+49 30 87654321"
+  }
+]

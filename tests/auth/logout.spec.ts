@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test';
 import { LoginPage } from '../../pages/LoginPage';
-import { Header } from '../../pages/Header';
+import { Header } from '../../components/Header';
 
 test.describe('Logout flow', () => {
   let loginPage: LoginPage;

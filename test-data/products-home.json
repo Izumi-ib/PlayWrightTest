@@ -1,0 +1,8 @@
+[
+  { "name": "$25 Virtual Gift Card", "price": "25.00", "hasAddToCart": true },
+  { "name": "14.1-inch Laptop", "price": "1590.00", "hasAddToCart": true },
+  { "name": "Build your own cheap computer", "price": "800.00", "hasAddToCart": true },
+  { "name": "Build your own computer", "price": "1200.00", "hasAddToCart": true },
+  { "name": "Build your own expensive computer", "price": "1800.00", "hasAddToCart": true },
+  { "name": "Simple Computer", "price": "800.00", "hasAddToCart": true }
+]
