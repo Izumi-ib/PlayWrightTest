@@ -23,12 +23,13 @@ test-results/
 .DS_Store
 Thumbs.db
 
-# Env (если добавишь)
+# Env 
 .env
 .env.local
 
 # Logs
 *.log
+test-log.txt
 
 # Mac & Linux trash
 *.swp
