@@ -1,0 +1,43 @@
+[2025-06-23T17:28:55.526Z] [INFO] Opened home page
+[2025-06-23T17:28:57.273Z] [INFO] [SoftCheck PASS] Product grid should be visible on the page
+[2025-06-23T17:28:57.280Z] [INFO] [SoftCheck PASS] Total products matching ".product-item" should be 6
+[2025-06-23T17:28:57.280Z] [SECTION] ✔ Verifying: $25 Virtual Gift Card
+[2025-06-23T17:28:57.288Z] [INFO] [SoftCheck PASS] Product #1: name should be "$25 Virtual Gift Card"
+[2025-06-23T17:28:57.295Z] [INFO] [SoftCheck PASS] Product "$25 Virtual Gift Card": price should be "25.00"
+[2025-06-23T17:28:57.301Z] [INFO] [SoftCheck PASS] Product "$25 Virtual Gift Card": "Add to cart" button should be visible
+[2025-06-23T17:28:57.301Z] [SECTION] ✔ Verifying: 14.1-inch Laptop
+[2025-06-23T17:28:57.306Z] [INFO] [SoftCheck PASS] Product #2: name should be "14.1-inch Laptop"
+[2025-06-23T17:28:57.311Z] [INFO] [SoftCheck PASS] Product "14.1-inch Laptop": price should be "1590.00"
+[2025-06-23T17:28:57.318Z] [INFO] [SoftCheck PASS] Product "14.1-inch Laptop": "Add to cart" button should be visible
+[2025-06-23T17:28:57.318Z] [SECTION] ✔ Verifying: Build your own cheap computer
+[2025-06-23T17:28:57.323Z] [INFO] [SoftCheck PASS] Product #3: name should be "Build your own cheap computer"
+[2025-06-23T17:28:57.332Z] [INFO] [SoftCheck PASS] Product "Build your own cheap computer": price should be "800.00"
+[2025-06-23T17:28:57.337Z] [INFO] [SoftCheck PASS] Product "Build your own cheap computer": "Add to cart" button should be visible
+[2025-06-23T17:28:57.337Z] [SECTION] ✔ Verifying: Build your own computer
+[2025-06-23T17:28:57.342Z] [INFO] [SoftCheck PASS] Product #4: name should be "Build your own computer"
+[2025-06-23T17:28:57.347Z] [INFO] [SoftCheck PASS] Product "Build your own computer": price should be "1200.00"
+[2025-06-23T17:28:57.352Z] [INFO] [SoftCheck PASS] Product "Build your own computer": "Add to cart" button should be visible
+[2025-06-23T17:28:57.352Z] [SECTION] ✔ Verifying: Build your own expensive computer
+[2025-06-23T17:28:57.357Z] [INFO] [SoftCheck PASS] Product #5: name should be "Build your own expensive computer"
+[2025-06-23T17:28:57.362Z] [INFO] [SoftCheck PASS] Product "Build your own expensive computer": price should be "1800.00"
+[2025-06-23T17:28:57.371Z] [INFO] [SoftCheck PASS] Product "Build your own expensive computer": "Add to cart" button should be visible
+[2025-06-23T17:28:57.371Z] [SECTION] ✔ Verifying: Simple Computer
+[2025-06-23T17:28:57.376Z] [INFO] [SoftCheck PASS] Product #6: name should be "Simple Computer"
+[2025-06-23T17:28:57.382Z] [INFO] [SoftCheck PASS] Product "Simple Computer": price should be "800.00"
+[2025-06-23T17:28:57.390Z] [INFO] [SoftCheck PASS] Product "Simple Computer": "Add to cart" button should be visible
+[2025-06-23T17:28:57.483Z] [INFO] Product "14.1-inch Laptop" added to cart
+[2025-06-23T17:28:57.849Z] [INFO] Opened cart page
+[2025-06-23T17:28:58.487Z] [INFO] [SoftCheck PASS] Cart item should have name "14.1-inch Laptop"
+[2025-06-23T17:28:58.495Z] [INFO] [SoftCheck PASS] Cart item should have price "1590.00"
+[2025-06-23T17:28:58.505Z] [INFO] [SoftCheck PASS] Quantity for "14.1-inch Laptop" should be "1"
+[2025-06-23T17:28:58.561Z] [INFO] Checked "Terms of Service" box
+[2025-06-23T17:28:59.052Z] [INFO] Proceeding to checkout
+[2025-06-23T17:28:59.758Z] [INFO] Proceeding to checkout as guest
+[2025-06-23T17:29:00.114Z] [INFO] Billing address form filled
+[2025-06-23T17:29:01.242Z] [INFO] Continued from shipping address
+[2025-06-23T17:29:01.451Z] [INFO] Shipping method selected
+[2025-06-23T17:29:01.735Z] [INFO] Payment method selected
+[2025-06-23T17:29:02.272Z] [INFO] Continued from payment info
+[2025-06-23T17:29:02.555Z] [INFO] Clicked confirm order
+[2025-06-23T17:29:03.444Z] [INFO] Order confirmation message verified.
+[2025-06-23T17:29:03.444Z] [INFO] Order confirmed successfully
