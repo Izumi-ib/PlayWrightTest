@@ -47,12 +47,15 @@ fs.writeFileSync(path.join(resultsDir, 'categories.json'), JSON.stringify(catego
 const historySrc = path.join('.cache', 'history');
 const historyDest = path.join(resultsDir, 'history');
 
-if (fs.existsSync(historySrc)) {
+if (fs.existsSync(historySrc) && fs.lstatSync(historySrc).isDirectory()) {
   fs.mkdirSync(historyDest, { recursive: true });
   const files = fs.readdirSync(historySrc);
   for (const file of files) {
     fs.copyFileSync(path.join(historySrc, file), path.join(historyDest, file));
   }
+  console.log('🟢 History copied from cache to allure-results');
+} else {
+  console.warn('⚠️  No valid .cache/history directory found to copy');
 }
 
 // Ensure .cache/history exists to avoid missing trend issues
@@ -66,3 +69,4 @@ if (!fs.existsSync(cacheHistoryPath)) {
 } else {
   console.log('🟩 .cache/history already exists');
 }
+
