@@ -18,6 +18,7 @@ playwright-report/
 allure-results/
 allure-report/
 test-results/
+.cache
 
 # OS
 .DS_Store

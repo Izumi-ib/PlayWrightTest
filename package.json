@@ -7,11 +7,21 @@
     "test": "playwright test",
     "test:headed": "playwright test --headed",
     "test:debug": "playwright test --project=debug-chrome",
-    "test:report": "playwright show-report",
-    "test:e2e": "npx playwright test --grep @e2e",
-    "allure:report": "allure generate ./allure-results --clean -o ./allure-report && allure open ./allure-report",
-    "allure:serve": "allure serve ./allure-results",
-    "prepare:allure-meta": "ts-node scripts/prepare-allure-meta.ts"
+    "test:e2e": "playwright test --grep @e2e",
+
+    "clean:allure": "rimraf allure-results allure-report",
+    "prepare:allure": "ts-node scripts/prepare-allure.ts",
+    "archive:report": "ts-node scripts/archive-report.ts",
+    
+    "report": "allure generate ./allure-results --clean -o ./allure-report && allure open ./allure-report",
+    "cache:history": "if exist allure-report\\history xcopy /E /I /Y allure-report\\history .cache\\history",
+    "reset:allure-history": "rimraf .cache && rimraf allure-results && rimraf allure-report",
+    
+    "test:full": "npm run cache:history && cross-env BUILD_NAME=\"Full Suite\" npm run clean:allure && npm test && npm run prepare:allure && npm run report && npm run archive:report && npm run cache:history",
+    "test:full:e2e": "npm run cache:history && cross-env BUILD_NAME=\"E2E Suite\" npx playwright test --grep 'e2e' && npm run prepare:allure && npm run report && npm run cache:history",
+    "test:full:regression": "npm run cache:history && cross-env BUILD_NAME=\"Regression Suite\" npx playwright test --grep 'regression' && npm run prepare:allure && npm run report && npm run cache:history",
+    
+    "dev:report": "npm run clean:allure && npx playwright test tests/your.test.ts && npm run prepare:allure && npm run report"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +31,8 @@
     "@playwright/test": "^1.53.0",
     "@types/node": "^24.0.1",
     "allure-commandline": "^2.34.0",
+    "cross-env": "^7.0.3",
+    "rimraf": "^6.0.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
   },
