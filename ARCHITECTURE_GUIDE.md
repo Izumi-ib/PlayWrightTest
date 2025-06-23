@@ -88,3 +88,5 @@ components/	Often	Update for new UI parts
 support/	Occasionally	Infrastructure, logging, etc.
 scripts/	Rare	Only when needed
 test-data/	Occasionally	Static mock/test data
+
+
