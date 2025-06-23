@@ -10,7 +10,7 @@
     "test:e2e": "playwright test --grep @e2e",
     "clean:allure": "rimraf allure-results allure-report",
     "prepare:allure": "ts-node scripts/prepare-allure.ts",
-    "archive:report": "ts-node scripts/archive-report.ts",
+    "archive:report": "ts-node scripts/archive-allure.ts",
     "report": "allure generate ./allure-results --clean -o ./allure-report",
     "report:open": "npm run report && allure open ./allure-report",
     "cache:history": "shx mkdir -p .cache/history && shx cp -r allure-report/history .cache/history || true",
