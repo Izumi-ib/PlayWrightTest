@@ -14,14 +14,15 @@ import { verifyProducts } from '../../support/utils/product-checker';
 import { billingStep, fillBillingAddressForm } from '../../support/utils/form-fillers/billing-form';
 import { clickContinue } from '../../support/utils/navigation';
 import { proceedThroughCheckout } from '../../support/flows/checkout';
+import { allure } from 'allure-playwright';
 
 test.describe('E2E: Guest Checkout Flow', () => {
-  test('@e2e @guest should allow guest to order a product successfully ', async ({ page }, testInfo) => {
-    testInfo.annotations.push({ type: 'owner', description: 'Baiastan' });
-    testInfo.annotations.push({ type: 'severity', description: 'critical' });
-    testInfo.annotations.push({ type: 'epic', description: 'Checkout' });
-    testInfo.annotations.push({ type: 'feature', description: 'Guest Checkout' });
-    testInfo.annotations.push({ type: 'story', description: 'Add product and complete order without login' });
+  test('@e2e @guest should allow guest to order a product successfully ', async ({ page }) => {
+    allure.owner('Baiastan');
+    allure.severity('critical');
+    allure.epic('Checkout');
+    allure.feature('Guest Checkout');
+    allure.story('Add product and complete order without login');
 
     const product = productsHome[1].name;
     const billing = billingData[0];
@@ -74,7 +75,7 @@ test.describe('E2E: Guest Checkout Flow', () => {
     });
 
     await billingStep(page, billing);
-    
+
     await test.step('Complete checkout flow (shipping, payment, confirm)', async () => {
       await proceedThroughCheckout(page);
     });
