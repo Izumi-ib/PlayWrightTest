@@ -14,6 +14,14 @@ jobs:
       - name: ⬇️ Checkout repo
         uses: actions/checkout@v4
 
+      - name: ♻️ Restore Allure history cache
+        uses: actions/cache@v3
+        with:
+          path: .cache/history
+          key: allure-history-${{ github.ref }}
+          restore-keys: |
+            allure-history-
+
       - name: 🟢 Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -33,6 +41,13 @@ jobs:
         with:
           name: allure-report
           path: ./allure-report
+
+      - name: ♻️ Save Allure history to cache
+        if: success()
+        uses: actions/cache@v3
+        with:
+          path: .cache/history
+          key: allure-history-${{ github.run_id }}
 
   deploy:
     needs: e2e
