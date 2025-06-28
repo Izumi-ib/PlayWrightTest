@@ -11,7 +11,7 @@ export class LoginPage {
         await this.page.goto('/login');
     }
 
-    async fillLoginForm(email: string, password: string, rememberMe: boolean){
+    async loginWith(email: string, password: string, rememberMe: boolean){
         await this.page.locator('#Email').fill(email);
         await this.page.locator('#Password').fill(password);
 
