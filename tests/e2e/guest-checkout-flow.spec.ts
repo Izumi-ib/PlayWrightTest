@@ -44,6 +44,7 @@ test.describe('E2E: Guest Checkout Flow', () => {
 
     await test.step('Add product to cart from homepage', async () => {
       const item = productCard.getByName(product);
+      
       await expect(item).toBeVisible();
       await productCard.clickAddToCart(item);
       log.info(`Product "${product}" added to cart`);
